@@ -5,8 +5,8 @@
 <div align="center">
     <hr width="250px"/>
     <div align="center">
-        <a href="https://discord.com/invite/DrfX6286kF" target="_blank">
-            <img src="https://img.shields.io/discord/881453188509753384?logo=discord&style=for-the-badge&logoColor=red&logoSize=auto&label=CHILLAX Support" alt="wq"/>
+            <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=SUPPORT%20SERVER&message=CHILLAX&colorA=333333&colorB=FB5454"
+                     alt="Support Server" style="border-radius: 5px"/>
         </a>
         <br/>
         <a href="https://chillax-org.github.io/chillaxdocs/" target="_blank">
