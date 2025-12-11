@@ -1,0 +1,120 @@
+<svg width="420" height="120" viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- CUTE FONTS (Soft & Bubbly) -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&amp;family=Varela+Round&amp;display=swap');
+    </style>
+
+    <!-- 1. Deep Space Base Background -->
+    <linearGradient id="deepBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050510" />
+      <stop offset="100%" stop-color="#140a1a" />
+    </linearGradient>
+
+    <!-- 2. The Red-Blue Border Gradient (Shifting) -->
+    <linearGradient id="chillBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5865F2" />
+      <stop offset="50%" stop-color="#FF4B4B" />
+      <stop offset="100%" stop-color="#5865F2" />
+      <animate attributeName="x1" values="0%;100%;0%" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="100%;200%;100%" dur="8s" repeatCount="indefinite" />
+    </linearGradient>
+
+    <!-- 3. Masks & Shapes -->
+    <clipPath id="softCrop">
+      <rect x="0" y="0" width="70" height="70" rx="18" ry="18" />
+    </clipPath>
+
+    <!-- 4. Text Shadow -->
+    <filter id="textShadow">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="black" flood-opacity="0.5"/>
+    </filter>
+    
+    <!-- 5. Nebula Blur (Creates the liquid effect) -->
+    <filter id="nebulaBlur">
+        <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
+    </filter>
+  </defs>
+
+  <!-- ================= COMPLEX LIQUID BACKGROUND ================= -->
+  
+  <!-- Base Dark Layer -->
+  <rect x="3" y="3" width="414" height="114" rx="20" ry="20" fill="url(#deepBase)" />
+
+  <!-- The "Complex" Part: Drifting Nebula Blobs -->
+  <g clip-path="url(#containerMask)" filter="url(#nebulaBlur)" opacity="0.6">
+    <!-- Blue Nebula drifting -->
+    <ellipse cx="100" cy="100" rx="60" ry="40" fill="#5865F2">
+        <animate attributeName="cx" values="100;300;100" dur="14s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="100;20;100" dur="10s" repeatCount="indefinite"/>
+        <animate attributeName="rx" values="60;100;60" dur="8s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Red Nebula drifting (Counter-movement) -->
+    <ellipse cx="320" cy="20" rx="70" ry="50" fill="#FF4B4B">
+        <animate attributeName="cx" values="320;120;320" dur="16s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="20;90;20" dur="11s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="50;90;50" dur="9s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- Grid Overlay (Subtle Tech Feel) -->
+  <pattern id="grid" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+     <path d="M 30 0 L 0 0 0 30" fill="none" stroke="white" stroke-width="0.5" stroke-opacity="0.05"/>
+  </pattern>
+  <rect x="3" y="3" width="414" height="114" rx="20" ry="20" fill="url(#grid)" />
+
+  <!-- GLASS & BORDER -->
+  <rect x="3" y="3" width="414" height="114" rx="20" ry="20" 
+        fill="white" fill-opacity="0.03" 
+        stroke="url(#chillBorder)" 
+        stroke-width="2.5" />
+
+  <!-- ================= LOGO SECTION (Left) ================= -->
+  <!-- Subtle divider line -->
+  <line x1="125" y1="25" x2="125" y2="95" stroke="white" stroke-opacity="0.1" stroke-width="2" stroke-linecap="round" />
+
+  <g transform="translate(25, 25)">
+    <!-- Bobbing Animation -->
+    <g>
+       <animateTransform attributeName="transform" type="translate" values="0,0; 0,4; 0,0" dur="5s" repeatCount="indefinite" />
+       
+       <!-- 
+            [!!!] PASTE YOUR BASE64 STRING INSIDE THE HREF BELOW
+       -->
+       <image width="70" height="70" clip-path="url(#softCrop)"
+              preserveAspectRatio="xMidYMid slice"
+              href="PASTE_BASE64_HERE" />
+
+       <!-- White Outline -->
+       <rect width="70" height="70" rx="18" ry="18" fill="none" stroke="white" stroke-opacity="0.25" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <!-- ================= TEXT SECTION (Right) ================= -->
+  <g transform="translate(150, 48)">
+     <!-- Parallax Animation (Moving lightly opposite to logo) -->
+     <animateTransform attributeName="transform" type="translate" values="150,48; 150,51; 150,48" dur="7s" repeatCount="indefinite" />
+
+    <!-- Title (Cuter Fonts) -->
+    <text x="0" y="0" font-family="'Fredoka', 'Varela Round', 'Arial Rounded MT Bold', sans-serif" font-weight="600" font-size="34" fill="#ffffff" letter-spacing="0.5" filter="url(#textShadow)">
+      CHILLAX
+    </text>
+    
+    <!-- Subtitle -->
+    <!-- EDIT THIS TEXT (e.g. DOCS, SUPPORT, GITHUB) -->
+    <text x="2" y="28" font-family="'Fredoka', 'Varela Round', 'Arial Rounded MT Bold', sans-serif" font-weight="500" font-size="14" fill="#E0E0FF" letter-spacing="1">
+      Support Server
+    </text>
+
+    <!-- Floating Dots (Blue and Red) -->
+    <circle cx="165" cy="35" r="3" fill="#5865F2">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="35;32;35" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="178" cy="35" r="3" fill="#FF4B4B">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" delay="1.5s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="35;32;35" dur="3s" delay="1.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>
