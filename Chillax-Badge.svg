@@ -1,11 +1,28 @@
-<svg width="220" height="50" viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg">
+<svg width="450" height="120" viewBox="0 0 450 120" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
-    <linearGradient id="chillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#5865F2;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#00FFFF;stop-opacity:1" />
+    <!-- Glassmorphic Gradient (Dark & Translucent) -->
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d0d;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#1a1a1a;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#2a0505;stop-opacity:0.85" />
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+
+    <!-- Logo Glow (Backlight for visibility) -->
+    <filter id="logoBacklight" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4.5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.15 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Circular Mask -->
+    <circle id="iconMask" cx="60" cy="60" r="40" />
+
+    <!-- Neon Text Glow -->
+    <filter id="textNeon">
+      <feGaussianBlur stdDeviation="1.2" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -13,18 +30,36 @@
     </filter>
   </defs>
 
-  <rect rx="25" ry="25" width="220" height="50" fill="url(#chillGrad)">
-    <animate attributeName="opacity" values="1;0.9;1" dur="2s" repeatCount="indefinite" />
+  <!-- Main Background Container -->
+  <rect x="3" y="3" width="444" height="114" rx="16" ry="16" 
+        fill="url(#glassGrad)" 
+        stroke="#FF4B4B" 
+        stroke-width="2">
+        <!-- Pulse Animation on Border -->
+        <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite" />
+        <animate attributeName="stroke" values="#FF4B4B;#ff0055;#FF4B4B" dur="5s" repeatCount="indefinite" />
   </rect>
 
-  <path fill="white" d="M46.7,14.2c-0.8-1.5-3.6-5.4-3.6-5.4c-8.1,0-15.5,3.6-20.9,9.4c-0.1,0.1-0.1,0.1,0,0.2
-    c2.5,2.9,5.7,5.2,9.2,6.9c0.1,0,0.2-0.1,0.2-0.2c-1.3-4.3,0.5-8.8,4.7-11.4c0,0,0.1,0,0.2,0c8.6,0,17.4,0,26.1,0
-    c0.1,0,0.1,0,0.2,0c4.1,2.6,6,7.1,4.7,11.4c0,0.1,0.1,0.1,0.2,0.2c3.6-1.6,6.7-4,9.2-6.9c0.1-0.1,0.1-0.2,0-0.2
-    c-5.4-5.8-12.8-9.4-20.9-9.4c0,0-2.8,3.9-3.6,5.4C51,13.6,48,13.6,46.7,14.2z M41,27.7c-2.4,0-4.4-2.1-4.4-4.8
-    s1.9-4.8,4.4-4.8c2.4,0,4.4,2.1,4.4,4.8S43.4,27.7,41,27.7z M56.7,27.7c-2.4,0-4.4-2.1-4.4-4.8s1.9-4.8,4.4-4.8
-    s4.4,2.1,4.4,4.8S59.1,27.7,56.7,27.7z" transform="translate(-10, 8) scale(1.3)" filter="url(#glow)"/>
+  <!-- LOGO SECTION -->
+  <g filter="url(#logoBacklight)">
+    <image x="20" y="20" width="80" height="80" clip-path="url(#iconMask)" 
+           preserveAspectRatio="xMidYMid slice"
+           href="https://chillax.inmoresentum.net/chillax-docs/chillaxlogodark.png" />
+  </g>
 
-  <text x="80" y="32" font-family="'Verdana', sans-serif" font-size="22" font-weight="bold" fill="white" letter-spacing="2" filter="url(#glow)">
-    CHILLAX
-  </text>
+  <!-- TEXT SECTION -->
+  <g transform="translate(120, 0)">
+    <!-- Main Header -->
+    <text x="0" y="55" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="34" fill="#ffffff" letter-spacing="1.5" filter="url(#textNeon)">
+      CHILLAX
+    </text>
+    
+    <!-- Subtitle with Red Accent -->
+    <text x="2" y="85" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="16" fill="#FF4B4B" letter-spacing="4" text-transform="uppercase">
+      Support Server
+    </text>
+
+    <!-- Subtle Float Animation -->
+    <animateTransform attributeName="transform" type="translate" values="120,0; 120,3; 120,0" dur="4.5s" repeatCount="indefinite" />
+  </g>
 </svg>
