@@ -6,7 +6,7 @@
 <div align="center">
     <hr width="250px"/>
     <div align="center">
-        <a href="https://chillax-org.github.io/chillaxdocs/" target="_blank">
+        <a href="https://discord.gg/DrfX6286kF" target="_blank">
             <img src="https://github.com/ZapGaming/Chillax/raw/refs/heads/main/Chillax-Badge.svg"
                      alt="Support Server" style="border-radius: 5px"/>
         </a>
