@@ -12,7 +12,7 @@
         </a>
         </br>
         <a href="https://chillax-org.github.io/chillaxdocs/" target="_blank">
-            <img src="https://github.com/ZapGaming/Chillax/raw/refs/heads/main/Chillax-Docs-Badge.svg"
+            <img src="https://github.com/ZapGaming/Chillax/raw/refs/heads/main/Chillax-Badge-2.svg"
                      alt="whatever" style="border-radius: 5px"/>
         </a>
     </div>
