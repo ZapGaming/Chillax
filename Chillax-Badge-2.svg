@@ -1,10 +1,5 @@
 <svg width="420" height="120" viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
-    <!-- CUTE FONTS (Soft & Bubbly) -->
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&amp;family=Varela+Round&amp;display=swap');
-    </style>
-
     <!-- 1. Deep Space Base Background -->
     <linearGradient id="deepBase" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#050510" />
@@ -30,7 +25,7 @@
       <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="black" flood-opacity="0.5"/>
     </filter>
     
-    <!-- 5. Nebula Blur (Creates the liquid effect) -->
+    <!-- 5. Nebula Blur -->
     <filter id="nebulaBlur">
         <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
     </filter>
@@ -41,7 +36,7 @@
   <!-- Base Dark Layer -->
   <rect x="3" y="3" width="414" height="114" rx="20" ry="20" fill="url(#deepBase)" />
 
-  <!-- The "Complex" Part: Drifting Nebula Blobs -->
+  <!-- Drifting Nebula Blobs -->
   <g clip-path="url(#containerMask)" filter="url(#nebulaBlur)" opacity="0.6">
     <!-- Blue Nebula drifting -->
     <ellipse cx="100" cy="100" rx="60" ry="40" fill="#5865F2">
@@ -57,14 +52,8 @@
         <animate attributeName="ry" values="50;90;50" dur="9s" repeatCount="indefinite"/>
     </ellipse>
   </g>
-
-  <!-- Grid Overlay (Subtle Tech Feel) -->
-  <pattern id="grid" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
-     <path d="M 30 0 L 0 0 0 30" fill="none" stroke="white" stroke-width="0.5" stroke-opacity="0.05"/>
-  </pattern>
-  <rect x="3" y="3" width="414" height="114" rx="20" ry="20" fill="url(#grid)" />
-
-  <!-- GLASS & BORDER -->
+  
+<!-- GLASS & BORDER -->
   <rect x="3" y="3" width="414" height="114" rx="20" ry="20" 
         fill="white" fill-opacity="0.03" 
         stroke="url(#chillBorder)" 
@@ -98,8 +87,7 @@
     </text>
     
     <!-- Subtitle -->
-    <!-- EDIT THIS TEXT (e.g. DOCS, SUPPORT, GITHUB) -->
-    <text x="2" y="28" font-family="'Fredoka', 'Varela Round', 'Arial Rounded MT Bold', sans-serif" font-weight="500" font-size="14" fill="#E0E0FF" letter-spacing="1">
+    <text x="2" y="28" font-family="'Varela Round', 'Arial Rounded MT Bold', sans-serif" font-weight="500" font-size="14" fill="#E0E0FF" letter-spacing="1">
       Support Server
     </text>
 
