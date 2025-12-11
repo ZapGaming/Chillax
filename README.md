@@ -2,13 +2,15 @@
 
 ![chillax cover](https://github.com/warrayquipsome/Chillax/assets/84565593/eedd9969-6f6d-4cf0-8885-89cefa473085)
 
+
 <div align="center">
     <hr width="250px"/>
     <div align="center">
-            <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=SUPPORT%20SERVER&message=CHILLAX&colorA=333333&colorB=FB5454"
+        <a href="https://chillax-org.github.io/chillaxdocs/" target="_blank">
+            <img src="https://img.shields.io/badge/Chillax%20Support%20Server-FB5454?style=for-the-badge&logo=discord&logoColor=#5865F2"
                      alt="Support Server" style="border-radius: 5px"/>
         </a>
-        <br/>
+        </br>
         <a href="https://chillax-org.github.io/chillaxdocs/" target="_blank">
             <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=DOCS&message=CHILLAX&colorA=333333&colorB=FB5454"
                      alt="whatever" style="border-radius: 5px"/>
