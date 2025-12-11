@@ -1,0 +1,30 @@
+<svg width="220" height="50" viewBox="0 0 220 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="chillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#5865F2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00FFFF;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect rx="25" ry="25" width="220" height="50" fill="url(#chillGrad)">
+    <animate attributeName="opacity" values="1;0.9;1" dur="2s" repeatCount="indefinite" />
+  </rect>
+
+  <path fill="white" d="M46.7,14.2c-0.8-1.5-3.6-5.4-3.6-5.4c-8.1,0-15.5,3.6-20.9,9.4c-0.1,0.1-0.1,0.1,0,0.2
+    c2.5,2.9,5.7,5.2,9.2,6.9c0.1,0,0.2-0.1,0.2-0.2c-1.3-4.3,0.5-8.8,4.7-11.4c0,0,0.1,0,0.2,0c8.6,0,17.4,0,26.1,0
+    c0.1,0,0.1,0,0.2,0c4.1,2.6,6,7.1,4.7,11.4c0,0.1,0.1,0.1,0.2,0.2c3.6-1.6,6.7-4,9.2-6.9c0.1-0.1,0.1-0.2,0-0.2
+    c-5.4-5.8-12.8-9.4-20.9-9.4c0,0-2.8,3.9-3.6,5.4C51,13.6,48,13.6,46.7,14.2z M41,27.7c-2.4,0-4.4-2.1-4.4-4.8
+    s1.9-4.8,4.4-4.8c2.4,0,4.4,2.1,4.4,4.8S43.4,27.7,41,27.7z M56.7,27.7c-2.4,0-4.4-2.1-4.4-4.8s1.9-4.8,4.4-4.8
+    s4.4,2.1,4.4,4.8S59.1,27.7,56.7,27.7z" transform="translate(-10, 8) scale(1.3)" filter="url(#glow)"/>
+
+  <text x="80" y="32" font-family="'Verdana', sans-serif" font-size="22" font-weight="bold" fill="white" letter-spacing="2" filter="url(#glow)">
+    CHILLAX
+  </text>
+</svg>
