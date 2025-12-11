@@ -374,11 +374,11 @@ html.theme-light #vc-spotify-player {
 .vc-spotify-album {
     font-size: 14px;
 }
-
+/*
 #vc-spotify-progress-bar {
     order: 2;
     z-index: 1;
-}
+}*/
 
 .vc-spotify-button {
     --interactive-normal: #FFFFFF;
@@ -407,6 +407,18 @@ html.theme-light #vc-spotify-player {
     inset: 3px 0 0 0px;
     box-shadow: none;
 } */
+
+/* The Grabber of the progress bar */
+#vc-spotify-player [class*="barFill_"]::after {
+  content: "var(--chillax-spotify-controll-grabber-icon)";
+  position: absolute;
+  right: -13px;
+  top: -11px;
+  color: #3d0357;
+  font-size: 25px;
+  text-shadow: 0 0 4px var(--geo-gold);
+  z-index: 6;
+}
 
 /* Transparent album image to preserve onClick functionality */
 #vc-spotify-album-image {
