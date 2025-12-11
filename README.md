@@ -7,7 +7,7 @@
     <hr width="250px"/>
     <div align="center">
         <a href="https://chillax-org.github.io/chillaxdocs/" target="_blank">
-            <img src="https://img.shields.io/badge/Chillax%20Support%20Server-FB5454?style=for-the-badge&logo=discord&logoColor=#5865F2"
+            <img src="https://github.com/ZapGaming/Chillax/raw/refs/heads/main/Chillax-Badge.svg"
                      alt="Support Server" style="border-radius: 5px"/>
         </a>
         </br>
