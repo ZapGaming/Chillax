@@ -1,26 +1,28 @@
-<svg width="400" height="110" viewBox="0 0 400 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="450" height="120" viewBox="0 0 450 120" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
-    <!-- Soft Background Gradient (Deep Chill) -->
-    <linearGradient id="softDark" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f0c29;stop-opacity:0.95" />
-      <stop offset="50%" style="stop-color:#302b63;stop-opacity:0.85" />
-      <stop offset="100%" style="stop-color:#24243e;stop-opacity:0.95" />
+    <!-- Glassmorphic Gradient (Dark & Translucent) -->
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d0d;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#1a1a1a;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#2a0505;stop-opacity:0.85" />
     </linearGradient>
 
-    <!-- The "Chill" Border Gradient -->
-    <linearGradient id="chillBorder" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#FF4B4B" />  <!-- Chillax Red -->
-      <stop offset="100%" style="stop-color:#5865F2" /> <!-- Discord Blue -->
-    </linearGradient>
+    <!-- Logo Glow (Backlight for visibility) -->
+    <filter id="logoBacklight" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4.5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.15 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
 
-    <!-- Avatar Crop Circle -->
-    <clipPath id="avatarCrop">
-      <circle cx="55" cy="55" r="35" />
-    </clipPath>
-    
-    <!-- Soft Glow Filter for Text -->
-    <filter id="softGlow">
-      <feGaussianBlur stdDeviation="0.8" result="coloredBlur"/>
+    <!-- Circular Mask -->
+    <circle id="iconMask" cx="60" cy="60" r="40" />
+
+    <!-- Neon Text Glow -->
+    <filter id="textNeon">
+      <feGaussianBlur stdDeviation="1.2" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -28,41 +30,36 @@
     </filter>
   </defs>
 
-  <!-- Card Body -->
-  <rect x="2" y="2" width="396" height="106" rx="55" ry="55" 
-        fill="url(#softDark)" 
-        stroke="url(#chillBorder)" 
-        stroke-width="2" />
-        
-  <!-- Background Liquid Effect (Subtle Moving Blobs) -->
-  <circle cx="50" cy="50" r="40" fill="#FF4B4B" opacity="0.08" filter="url(#softGlow)">
-      <animate attributeName="cx" values="50;350;50" dur="15s" repeatCount="indefinite" />
-  </circle>
-  <circle cx="350" cy="60" r="30" fill="#5865F2" opacity="0.08" filter="url(#softGlow)">
-      <animate attributeName="cx" values="350;50;350" dur="12s" repeatCount="indefinite" />
-  </circle>
+  <!-- Main Background Container -->
+  <rect x="3" y="3" width="444" height="114" rx="16" ry="16" 
+        fill="url(#glassGrad)" 
+        stroke="#FF4B4B" 
+        stroke-width="2">
+        <!-- Pulse Animation on Border -->
+        <animate attributeName="stroke-opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite" />
+        <animate attributeName="stroke" values="#FF4B4B;#ff0055;#FF4B4B" dur="5s" repeatCount="indefinite" />
+  </rect>
 
-  <!-- Left Side: Avatar Image -->
-  <image x="20" y="20" width="70" height="70" clip-path="url(#avatarCrop)"
-         preserveAspectRatio="xMidYMid slice"
-         href="https://avatars.githubusercontent.com/u/168612672?s=280&v=4">
-         <!-- Gentle pulse on image -->
-         <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="4s" repeatCount="indefinite" additive="sum" transform="translate(-2.75, -2.75)"/>
-  </image>
+  <!-- LOGO SECTION -->
+  <g filter="url(#logoBacklight)">
+    <image x="20" y="20" width="80" height="80" clip-path="url(#iconMask)" 
+           preserveAspectRatio="xMidYMid slice"
+           href="https://chillax.inmoresentum.net/chillax-docs/chillaxlogodark.png" />
+  </g>
 
-  <!-- Right Side: Text -->
-  <g transform="translate(110, 42)">
-    <text x="0" y="0" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-weight="bold" font-size="28" fill="#FFFFFF" letter-spacing="1">
+  <!-- TEXT SECTION -->
+  <g transform="translate(120, 0)">
+    <!-- Main Header -->
+    <text x="0" y="55" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="34" fill="#ffffff" letter-spacing="1.5" filter="url(#textNeon)">
       CHILLAX
     </text>
-    <text x="0" y="24" font-family="'Trebuchet MS', 'Segoe UI', sans-serif" font-weight="400" font-size="14" fill="#aab0c0" letter-spacing="3">
-      SUPPORT SERVER
+    
+    <!-- Subtitle with Red Accent -->
+    <text x="2" y="85" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="500" font-size="16" fill="#FF4B4B" letter-spacing="4" text-transform="uppercase">
+      Support Server
     </text>
+
+    <!-- Subtle Float Animation -->
+    <animateTransform attributeName="transform" type="translate" values="120,0; 120,3; 120,0" dur="4.5s" repeatCount="indefinite" />
   </g>
-  
-  <!-- Arrow Indicator -->
-  <path d="M 330 55 L 340 55 M 336 51 L 340 55 L 336 59" stroke="white" stroke-width="2" stroke-linecap="round" fill="none">
-    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
-    <animateTransform attributeName="transform" type="translate" values="0,0; 5,0; 0,0" dur="2s" repeatCount="indefinite"/>
-  </path>
 </svg>
