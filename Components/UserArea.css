@@ -416,7 +416,7 @@ html.theme-light #vc-spotify-player {
   top: -11px;
   color: #3d0357;
   font-size: 25px;
-  text-shadow: 0 0 4px var(--geo-gold);
+  text-shadow: 0 0 4px rgb(251, 84, 84);
   z-index: 6;
 }
 
