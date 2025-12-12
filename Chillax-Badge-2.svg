@@ -77,13 +77,13 @@
      <!-- Parallax Animation (Moving lightly opposite to logo) -->
      <animateTransform attributeName="transform" type="translate" values="150,48; 150,51; 150,48" dur="7s" repeatCount="indefinite" />
 
-    <!-- Title -->
-    <text x="0" y="0" font-family="sans-serif" font-weight="600" font-size="34" fill="#ffffff" letter-spacing="0.5" filter="url(#textShadow)">
+    <!-- Title (Cuter Fonts) -->
+    <text x="0" y="0" font-family="'Varela Round', 'Arial Rounded MT Bold', sans-serif" font-weight="600" font-size="34" fill="#ffffff" letter-spacing="0.5" filter="url(#textShadow)">
       CHILLAX
     </text>
     
     <!-- Subtitle -->
-    <text x="2" y="28" font-family="'sans-serif" font-weight="500" font-size="14" fill="#E0E0FF" letter-spacing="1">
+    <text x="2" y="28" font-family="'Varela Round', 'Arial Rounded MT Bold', sans-serif" font-weight="500" font-size="14" fill="#E0E0FF" letter-spacing="1">
       Support Server
     </text>
 
