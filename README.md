@@ -11,8 +11,13 @@
                      alt="Support Server" style="border-radius: 5px"/>
         </a>
         </br>
-        <a href="https://chillax-org.github.io/chillaxdocs/" target="_blank">
+        <a href="https://discord.gg/DrfX6286kF" target="_blank">
             <img src="https://github.com/ZapGaming/Chillax/raw/refs/heads/main/Chillax-Badge-2.svg"
+                     alt="whatever" style="border-radius: 5px"/>
+        </a>
+        </br>
+        <a href="https://discord.gg/DrfX6286kF" target="_blank">
+            <img src="https://badge-oq5l.onrender.com/superbadge/DrfX6286kF"
                      alt="whatever" style="border-radius: 5px"/>
         </a>
     </div>
